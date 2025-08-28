@@ -5,3 +5,5 @@
 # @Project : Deep-Sea-Authorization
 # @File    : deepsea.py
 
+class DeepSea(object):
+    pass
