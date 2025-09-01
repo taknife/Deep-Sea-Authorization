@@ -22,7 +22,7 @@ def get_motherboard_uuid():
         # wmic 获取失败，尝试使用 PowerShell
         result = check_output(
             "powershell -command \"(Get-CimInstance -Class Win32_ComputerSystemProduct).UUID\"",
-            shell=True
+            shell = True
         ).decode().strip()
         return result if result else "UNKNOWN_UUID"
 
@@ -42,7 +42,7 @@ def get_cpu_id():
         # wmic 失败，尝试 PowerShell
         result = check_output(
             "powershell -command \"(Get-CimInstance -Class Win32_Processor).ProcessorId\"",
-            shell=True
+            shell = True
         ).decode().strip()
         return result if result else "UNKNOWN_CPU"
 
